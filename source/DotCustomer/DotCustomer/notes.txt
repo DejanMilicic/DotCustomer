@@ -1,0 +1,3 @@
+﻿Generate script by running
+
+Update-Database -Script -SourceMigration:0

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DotCustomer</id>
+        <version>0.1.0</version>
+        <title>DotCustomer</title>
+        <authors>Dejan Milicic</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <developmentDependency>true</developmentDependency>
+        <description>DotCustomer</description>
+        <dependencies>
+            <dependency id="EntityFramework" version="" />
+            <dependency id="AutoMapper" version="" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\DotCustomer.dll" target="lib\DotCustomer.dll" />
+        <file src="readme.txt" target="readme.txt" />
+    </files>
+</package>
