@@ -57,18 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Customer.cs" />
-    <Compile Include="Domain\CustomerAddress.cs" />
     <Compile Include="DotCustomerApi.cs" />
     <Compile Include="IDotCustomerApi.cs" />
     <Compile Include="Infrastructure\AutomapperBootstrapper.cs" />
     <Compile Include="Infrastructure\EntityFramework\Db.cs" />
     <Compile Include="Infrastructure\EntityFramework\Entities\EfCustomer.cs" />
-    <Compile Include="Infrastructure\EntityFramework\Entities\EfCustomerAddress.cs" />
     <Compile Include="Interfaces\ICustomer.cs" />
-    <Compile Include="Interfaces\ICustomerAddress.cs" />
     <Compile Include="Migrations\201505302109086_Initial.cs" />
     <Compile Include="Migrations\201505302109086_Initial.Designer.cs">
       <DependentUpon>201505302109086_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505311936242_Initial2.cs" />
+    <Compile Include="Migrations\201505311936242_Initial2.Designer.cs">
+      <DependentUpon>201505311936242_Initial2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +86,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505302109086_Initial.resx">
       <DependentUpon>201505302109086_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505311936242_Initial2.resx">
+      <DependentUpon>201505311936242_Initial2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

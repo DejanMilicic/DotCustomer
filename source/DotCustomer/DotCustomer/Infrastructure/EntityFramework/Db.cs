@@ -18,7 +18,6 @@ namespace DotCustomer.Infrastructure.EntityFramework
 		}
 
 		public DbSet<EfCustomer> Customers { get; set; }
-		public DbSet<EfCustomerAddress> CustomerAddresses { get; set; }
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{

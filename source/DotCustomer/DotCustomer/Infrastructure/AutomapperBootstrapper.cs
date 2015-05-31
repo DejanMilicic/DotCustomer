@@ -10,7 +10,6 @@ namespace DotCustomer.Infrastructure
 		public static void Configure()
 		{
 			Mapper.CreateMap<EfCustomer, Customer>();
-			Mapper.CreateMap<EfCustomerAddress, CustomerAddress>();
 
 			Mapper.AssertConfigurationIsValid();
 		}

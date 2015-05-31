@@ -5,9 +5,19 @@ namespace DotCustomer.Interfaces
 	{
 		string Email { get; }
 		string Password { get; }
+
+		string Title { get; }
 		string FirstName { get; }
 		string LastName { get; }
-		ICustomerAddress ShippingAddress { get; }
-		ICustomerAddress BillingAddress { get; }
+		string Company { get; }
+		string Street { get; }
+		string StreetNumber { get; }
+		string City { get; }
+		string Zip { get; }
+		string Country { get; }
+		string State { get; }
+		string Province { get; }
+		string Phone { get; }
+		bool SubscribedToNewsletter { get; }
 	}
 }
