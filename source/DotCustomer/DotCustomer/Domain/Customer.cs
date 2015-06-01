@@ -21,6 +21,6 @@ namespace DotCustomer.Domain
 		public string Province { get; set; }
 		public string Phone { get; set; }
 		public bool SubscribedToNewsletter { get; set; }
-
+		public bool Disabled { get; set; }
 	}
 }

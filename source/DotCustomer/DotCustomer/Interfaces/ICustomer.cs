@@ -19,5 +19,6 @@ namespace DotCustomer.Interfaces
 		string Province { get; }
 		string Phone { get; }
 		bool SubscribedToNewsletter { get; }
+		bool Disabled { get; }
 	}
 }
