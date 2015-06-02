@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="DotCustomerApi.cs" />
+    <Compile Include="Exceptions\DuplicatedUserException.cs" />
     <Compile Include="IDotCustomerApi.cs" />
     <Compile Include="Infrastructure\AutomapperBootstrapper.cs" />
     <Compile Include="Infrastructure\EntityFramework\Db.cs" />
