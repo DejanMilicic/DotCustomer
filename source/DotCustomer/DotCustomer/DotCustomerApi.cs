@@ -9,6 +9,7 @@ namespace DotCustomer
 	using AutoMapper;
 
 	using DotCustomer.Domain;
+	using DotCustomer.Exceptions;
 	using DotCustomer.Infrastructure;
 	using DotCustomer.Infrastructure.EntityFramework;
 	using DotCustomer.Infrastructure.EntityFramework.Entities;
@@ -25,11 +26,18 @@ namespace DotCustomer
 		{
 			using (Db db = new Db())
 			{
-				EfCustomer efCustomer = new EfCustomer(email);
-				db.Customers.Add(efCustomer);
-				db.SaveChanges();
+				if (this.UserExists(db, email))
+				{
+					throw new DuplicatedUserException();
+				}
+				else
+				{
+					EfCustomer efCustomer = new EfCustomer(email);
+					db.Customers.Add(efCustomer);
+					db.SaveChanges();
 
-				return Mapper.Map<Customer>(efCustomer);
+					return Mapper.Map<Customer>(efCustomer);					
+				}
 			}
 		}
 
@@ -47,6 +55,19 @@ namespace DotCustomer
 					return Mapper.Map<Customer>(efCustomer);
 				}
 			}
+		}
+
+		private bool UserExists(Db db, string email)
+		{
+			return db.Customers.Any(x => x.Email == email);
+		}
+
+		public bool UserExists(string email)
+		{
+			using (Db db = new Db())
+			{
+				return this.UserExists(db, email);
+			}			
 		}
 
 		private string Hash(string password)

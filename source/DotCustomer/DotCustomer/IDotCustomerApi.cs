@@ -14,5 +14,7 @@
 			string title = "", string firstName = "", string lastName = "", string company = "",
 			string street = "", string streetNumber = "", string city = "", string zip = "", string country ="",
 			string state = "", string province = "", string phone = "");
+
+		bool UserExists(string email);
 	}
 }
